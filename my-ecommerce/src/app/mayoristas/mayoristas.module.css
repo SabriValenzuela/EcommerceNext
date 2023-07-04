@@ -1,0 +1,68 @@
+
+ .ventas_mayoristas {
+  margin: 0px 30px 20px;
+  background-color: #7eaadd5d;
+    padding: 20px 20px 20px 0px;
+   
+
+   
+  }
+  .custom_title h2{
+ 
+    font-size: 24px; /* Tamaño del título */
+    font-weight: bold; /* Negrita */
+   
+  }
+  
+  .ventas_mayoristas h2 {
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+   
+
+  }
+  
+  .ventas_mayoristas p {
+    margin-bottom: 10px;
+    color: #000000;
+    margin-left: 20px;
+  }
+  
+  .ventas_mayoristas h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  .ventas_mayoristas ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #000000;
+    margin-left: 20px;
+  }
+  
+  .ventas_mayoristas li {
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  .info_imagen {
+    float: right;
+    margin-left: 20px;
+    max-width: 250px;
+    height: auto;
+    margin-left: 20px;
+    border-image: 20px;
+  }
+
+  #compra_mayorista {
+    color:#000000; 
+    margin-left: 20px;
+  }
+  
+/*   .highlight {
+    color: #4F3930;
+    font-weight: bold;
+  }
+ */

@@ -1,0 +1,67 @@
+.sobreNosotrosContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4d3002f;
+    margin: 30px 60px;
+}
+
+.videoSobreNosotros iframe {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.sobreNosotrosContainer h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.sobreNosotrosContainer p {
+    text-align: justify;
+    padding: 20px 40px;
+}
+
+.fotosNosotros img {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+    position: relative;
+    float: right;
+    overflow: hidden;
+    min-width: 210px;
+    max-width: 310px;
+    width: 100%;
+    padding: 30px;
+}
+
+.apiturismo h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 40px;
+}
+
+.apicultura p {
+    text-align: justify;
+    padding: 20px 40px;
+    font-size: 30px;
+}
+
+.fotosApiturismo img {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+    position: relative;
+    float: right;
+    overflow: hidden;
+    min-width: 210px;
+    max-width: 310px;
+    width: 100%;
+    padding: 30px 20px;
+    ;
+}
