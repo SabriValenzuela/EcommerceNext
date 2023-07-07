@@ -1,21 +1,38 @@
-import React from 'react'
+/* import React from 'react'
 import style from "./card.module.css"
-import Link from 'next/link'
+import Image from 'next/image';
+import productos from '@/app/productos/productosPagina';
 
-export default function card() {
-  return (
+
+
+export default function Card({prod}) {
+ 
+
+return(
+  
+<>
+<div className={style.container_prod}> 
 <div className={style.carta_prod}>
-        <h5 className={style.titulo_item}>Miel pura (500gr)</h5>
-        <img src="img/Mielabeja200gr_4.jpg" className={style.img_item} />
-        <div className={style.capa}>
-          <h3>Miel pura</h3>
-          <p>
-            Producida respetando los ciclos naturales de vida en las abejas y con cuidados ecológicos y amigables con el medio ambiente, favoreciendo así a los polinizadores locales y la flora 
-          </p>
-          <button>Agregar al carro</button>
-        </div>
-        <h5 className={style.precio_item}>$4.500</h5>
-      </div>
-      
-      )
-    }
+            <h5 className={style.titulo_item}>hola</h5>
+            <Image src="/images/PropoleoSpray_1.jpg" className={style.img_item} width={190} height={240}/>
+ 
+            <div className={style.capa}>
+              <h3>Propóleo en tintura </h3>
+              <p>
+                Propoleo en estado puro disuelto en alcohol, sirve para hacer gárgaras ante infecciones bucales, faringeas, laringeas (amigdalitis)
+              </p>
+              <button>Agregar al carro</button>
+            </div>
+            <h5 className={style.precio_item}>$3.500</h5>
+          </div>
+          </div>
+ 
+
+</>
+
+
+);
+
+}
+
+ */

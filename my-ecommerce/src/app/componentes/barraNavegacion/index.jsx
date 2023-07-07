@@ -8,21 +8,20 @@ export default function BarraNavegacion() {
     <header className={style.header}>
      <nav className={style.nav}>
      <div className={style.nav_links} id={style.navLinks}>
-            <Link href="/Inicio/index.html">Inicio</Link>
-            <Link href="/sobreNosotros/sobreNosotros.html">Sobre Nosotros</Link>    
+            <Link href="/">Inicio</Link>
+            <Link href="/sobreNosotros">Sobre Nosotros</Link>    
                   <Link href="/productos mala/productos.html">Productos</Link>
-           <Link href="/Blog/Publicaciones_blog.html">Blog</Link>
-           <Link href="/Mayorista/mayoristas.html">Mayoristas</Link>
+           <Link href="/blogPublicaciones">Blog</Link>
+           <Link href="/mayoristas">Mayoristas</Link>
            <Link href="/contacto/contacto.html">Contacto</Link>
             </div>
       </nav>
   <section className={style.logo}>
-    <Image src="/images/logoNegro.png" className={style.logo} alt="" width={100} height={100} />
+    <Image src="/images/logoNegro.png" className={style.logo} alt="logo" width={"100"} height={"100"} />
   </section>
   <div className={style.wave} style={{height: '150px', overflow: 'hidden'}}><svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{height: '100%', width: '100%'}}>
     <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={{stroke: 'none', fill: '#fff'}} />
   </svg></div>
-
  
 </header>
 

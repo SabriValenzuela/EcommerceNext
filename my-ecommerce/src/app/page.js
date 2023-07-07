@@ -1,11 +1,60 @@
 import Image from 'next/image'
 import style from './page.module.css'
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className={style.mainNosotros}>
+   
+   
+   <main className={style.inicio}>
+  
+       <section id={style.Natural_apicola}>
+        <h3 className={style.tituloproducto}>Nuestros productos</h3>
+        <div className={style.container_prod}>
+          <div className={style.carta_prod}>
+            <h5 className={style.titulo_item}>Propóleo en spray </h5>
+            <Image src="/images/PropoleoSpray_1.jpg" className={style.img_item} width={190} height={240} />
+            <div className={style.capa}>
+              <h3>Propóleo en spray </h3>
+              <p>
+                Formulado para aliviar los dolores de garganta producidos por la tos o irritación
+              </p>
+              <Link href="/paginaEcommerce/Productos/productos-1.html">
+                <button>Agregar al carro</button>
+              </Link>
+            </div>
+            <h5 className={style.precio_item}>$4.000</h5>
+          </div>
+          <div className={style.carta_prod}>
+            <h5 className={style.titulo_item}>Propóleo en tintura </h5>
+            <Image src="/images/PropoleoSpray_1.jpg" className={style.img_item} width={190} height={240}/>
+ 
+            <div className={style.capa}>
+              <h3>Propóleo en tintura </h3>
+              <p>
+                Propoleo en estado puro disuelto en alcohol, sirve para hacer gárgaras ante infecciones bucales, faringeas, laringeas (amigdalitis)
+              </p>
+              <button>Agregar al carro</button>
+            </div>
+            <h5 className={style.precio_item}>$3.500</h5>
+          </div>
+          <div className={style.carta_prod}>
+            <h5 className={style.titulo_item}>Polen granulado (100gr)</h5>
+            <img src="/images/PropoleoSpray_1.jpg" className={style.img_item} width={190} height={240}/>
+            <div className={style.capa}>
+              <h3>Polen granulado </h3>
+              <p>
+                Polen granulado de flores del territorio Araucanía Andina recolectado por abejas
+              </p>
+              <button>Agregar al carro</button>
+            </div>
+            <h5 className={style.precio_item}>$3.500</h5>
+          </div>
+        </div>
+      </section>
+  
     <section className={`${style.contenedor} ${style.sobre_nosotros}`}>
-         <h2 className={style.titulo}> Sobre Nosotros </h2>
+         <h2 className={style.tituloNosotros}> Sobre Nosotros </h2>
          <div className={style.contenedor_sobre_nosotros}>
            <Image src="/images/fotoFamiliar.jpg" alt="" className={style.imagen_about_us} width={100} height={300}/>
            <div className={style.contenido_textos}>
@@ -34,6 +83,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-     </main>
-  )
+
+         </main>
+  )    
 }

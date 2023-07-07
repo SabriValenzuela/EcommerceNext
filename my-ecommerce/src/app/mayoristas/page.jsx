@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 
 export default function page() {
-  return (
+      return (
     <div className={style.ventas_mayoristas}>
     <h2 className={style.custom_title}>Ventas Mayoristas</h2>
     <br /><br />

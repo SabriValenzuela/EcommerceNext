@@ -1,7 +1,10 @@
+
+
 /* About us */
-.mainNosotros{
+.inicio {
   margin: 0px 30px;
-  background-color: #7eaadd5d;
+
+ 
 }
 
 .mainNosotros .sobre_nosotros{
@@ -21,8 +24,12 @@
   width: 48%;
 }
 
-.titulo h2{
+.tituloNosotros {
+  justify-content: center;
+  font-size: 30px;
   text-align: center;
+  margin: 10px;
+  color:#fdb93c;
 }
 
 .contenido_textos h3{
@@ -33,12 +40,18 @@
   padding: 0px 0px 30px 15px;
   font-weight: 300;
   text-align: justify;
+  padding-top: 30px;
+  
 }
 
-.tituloPropositos {
+.contenedor_sobre_nosotros img{
+ border-radius: 20px;
+}
+
+.tituloPropositos h1 {
   text-align: center;
-  font-size: 20px;
-  color: #000000;
+  font-size: 30px;
+  color: #7eaadd;
   background-color: #ffffff;
   padding-top: 30px;
 }
@@ -55,7 +68,7 @@
 
 .textoPropositos {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color:#000000;
   font-size: 15px;
   display: block;
   break-inside: avoid;
@@ -78,4 +91,120 @@
   -webkit-box-shadow: 0px 0px 15px 15px #7eaadd;
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
+}
+
+/*-------contenido Productos-----------*/
+
+.tituloproducto {
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  color:#fdb93c;
+}
+
+.container_prod {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  
+}
+
+.container_prod .carta_prod {
+  position: relative;
+  width: 230px;
+  height: 350px;
+  border-radius: 10px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 15px;
+  text-align: center;
+  transition: all 0.25s;
+  background: linear-gradient(209.19deg, #ffffff 5.29%, #FFFFFF 160.51%);
+}
+
+.container_prod .carta_prod:hover {
+  transform: translateY(-25px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.4);
+}
+
+.container_prod .carta_prod img {
+  width: 190px;
+  height: 240px;
+  border-radius: 10px;
+  max-width: 100%; 
+  margin-top: 5px;  
+}
+
+.container_prod .carta_prod .capa {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 8, 8, 0.6);
+  transition: all 500ms ease-out;
+  border-radius: 10px;
+  max-width: 100%;
+  object-fit: contain;
+  text-align:center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container_prod .carta_prod .capa h3{
+  color: white;
+  font-weight: 400;
+  margin-bottom: 120px;
+  transition: all 500ms ease-out;
+  margin-top: 30px;
+
+}
+.container_prod .carta_prod .capa p{
+  color: white;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+  
+}
+
+.container_prod .carta_prod:hover> .capa{
+  opacity: 1;
+  visibility: visible;
+  
+}
+
+.container_prod .carta_prod:hover> .capa h3{
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.titulo_item {
+  font-size: 20px;
+  color: #2866ad;
+  justify-content: left;
+  margin:  5px;
+}
+
+
+.precio_item {
+  font-size: 20px;
+  align-items: center;
+  margin: 5px;
+  color: black;
+}
+
+.carta_prod .capa button {
+  font-size: 1em;
+  font-weight: 100;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.carta_prod button:hover {
+  background-color: #fdb93c;
+color: #000;
 }
