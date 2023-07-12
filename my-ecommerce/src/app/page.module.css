@@ -41,6 +41,7 @@
   font-weight: 300;
   text-align: justify;
   padding-top: 30px;
+  display: flex;
   
 }
 
@@ -63,7 +64,7 @@
   column-count: 3;
   /* Divide el contenido en tres columnas */
   column-gap: 60px;
-  display: flex;
+  flex-wrap: wrap;
 }
 
 .textoPropositos {
@@ -74,6 +75,7 @@
   break-inside: avoid;
   flex: 1;
   margin: 30px;
+  
 }
 
 .propositos img {

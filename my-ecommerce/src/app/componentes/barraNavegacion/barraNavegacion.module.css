@@ -1,72 +1,74 @@
 /* Header */
 
 .header {
-    width: 100%;
-    height: 385px;
-       /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(224, 54%, 69%, 0.459), hsla(234, 88%, 68%, 0.664)), url("/images/volcan2.png");
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(51, 73%, 70%, 0.459), hsla(217, 100%, 64%, 0.664)), url("/images/volcan2.png");
-        background-size: cover;
-    background-attachment: fixed;
-    position: relative;
+  width: 100%;
+  height: 385px;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+      to right,
+      hsla(224, 54%, 69%, 0.459),
+      hsla(234, 88%, 68%, 0.664)
+    ),
+    url("/images/volcan2.png");
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+      to right,
+      hsla(51, 73%, 70%, 0.459),
+      hsla(217, 100%, 64%, 0.664)
+    ),
+    url("/images/volcan2.png");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
-.nav{
- 
-    text-align: right;
-    padding: 30px 50px 0 0;
-    
+.nav {
+  text-align: right;
+  padding: 30px 50px 0 0;
 }
 
-.logo img{
-   justify-content: left;
-   width: 180px;
-   height: 150px;
-   margin-top: -10px;
-   margin-left: 50px;
-   
+.logo img {
+  justify-content: left;
+  /* width: 180px;
+  height: 150px; */
+  margin-top: -10px;
+  margin-left: 50px;
 }
 
-.nav a{
-    color:#ffffff;
-    font-weight: 900;
-    text-decoration: none;
-    margin-right: 10px;
-    font-style: inherit;
-     width: 20%;
-    padding: .65rem 0;
-     text-align: right;
-    text-transform: uppercase;
+.nav a {
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  margin-right: 10px;
+  font-style: inherit;
+  width: 20%;
+  padding: 0.65rem 0;
+  text-align: right;
+  text-transform: uppercase;
+  flex-wrap: wrap;
 }
 
+.nav :hover {
+  text-decoration: underline;
 
-  
-.nav :hover{
-    text-decoration: underline;
-   
-    color: #fdb93c;            
-  }
- 
+  color: #fdb93c;
+}
 
 /*nav > a:hover{
     text-decoration: underline;
 }*/
 
 .nav_links ul {
-    display: flex;
-  
+  display: flex;
 }
 
-.wave{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 150px; 
-    overflow: hidden;
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
 }
-
-
 
 /*
 .header {

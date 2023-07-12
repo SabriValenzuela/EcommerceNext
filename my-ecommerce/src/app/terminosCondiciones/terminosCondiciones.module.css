@@ -1,45 +1,45 @@
 
- .Términos_y_condiciones {
-    background-color:#f1e9e0;
+ .terminos_y_condiciones {
+    background-color: #fdb93c00;
     padding: 20px;
     margin: 30px;
     margin-bottom: 20px;
     align-items: center;
-    font-family: 'Sorts Mill Goudy', serif; /* Aplica import de cont */
+   
   }
   .custom_title {
-    font-family: 'Berkshire Swash', cursive; /* Aplica la fuente Berkshire Swash */
+   
     font-size: 24px; /* Tamaño del título */
     font-weight: bold; /* Negrita */
   }
 
-  .Términos_y_condiciones h1 {
-    font-size: 24px;
-    color: #4F3930;
+  .terminos_y_condiciones h1 {
+    font-size: 29px;
+    color:  #fdb93c;
     text-align: center;
 
   }
-  .Términos_y_condiciones h2 {
-    font-size: 24px;
-    color: #4F3930;
+  .terminos_y_condiciones h2 {
+    font-size: 20px;
+    color:  #7eaadd;
     text-align: start;
 
   }
 
-  .Términos_y_condiciones p {
+  .terminos_y_condiciones p {
     margin-bottom: 10px;
-    color: #666;
+    color: #000000;
     text-align: justify;
   }
 
 
-  .Términos_y_condiciones ul {
+  .terminos_y_condiciones ul {
     list-style-type: disc;
     margin-left: 20px;
-    color: #666;
+    color: #000000;
   }
 
-  .Términos_y_condiciones li {
+  .terminos_y_condiciones li {
     margin-bottom: 5px;
     text-align: justify;
   }

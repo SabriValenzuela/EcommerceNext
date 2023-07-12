@@ -1,109 +1,45 @@
-/*Carrito de compras*/
-.icon_cart{
-  width: 40px;
-  height: 40px;
-  stroke: #000;
-  
-}
-
-.icon_cart:hover{
-  cursor: pointer;
-}
-.container_icon{
-  position: relative;
-}
-
-.count_products{
+.cart {
   position: absolute;
-  top: 55%;
-  right: 0;
-
-  background-color: rgb(0, 0, 0);
-  color: #ffffff;
-  width: 25px;
-  height: 25px;
-
+  top: 150px;
+  right: 70px;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+  .i {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+  }
+}
+.cart:hover {
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  box-shadow: 0px 0px 15px 15px #ffffff;
+  -webkit-box-shadow: 0px 0px 15px 15px #ffffff;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
 }
 
-#contador_productos{
-  font-size: 12px;
-}
-
-.container_cart_products{
-  position: absolute;
-  top: 50px;
-  right: 0;
-
-  background-color: #fff;
-  width: 400px;
-  z-index: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
-  border-radius: 10px;
-  
-}
-
-.cart_product{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-
-}
-
-.info_cart_product{
-  display: flex;
-  justify-content: space-between;
-  flex: 0.8;
-}
-
-.titulo_producto_carrito{
-  font-size: 20px;
-}
-
-.precio_producto_carrito{
-  font-weight: 700;
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-.cantidad_producto_carrito{
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.icon_close{
-  width: 25px;
-  height: 25px;
-}
-
-.icon_close:hover{
-  stroke: red;
-  cursor: pointer;
-}
-
-.cart_total{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  gap: 20px;
-}
-
-.cart_total h3{
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.total_pagar{
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.hidden_cart{
-  display: none;
-}
+/*   &:before {
+    content: attr(data-totalitems);
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #2bd156;
+    line-height: 24px;
+    padding: 0 5px;
+    height: 24px;
+    min-width: 24px;
+    color: white;
+    text-align: center;
+    border-radius: 24px;
+  }
+  &.shake {
+    animation: shakeCart 0.4s ease-in-out forwards;
+  } */
