@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function page() {
   const [carrito, setCarrito] = useState([]);
   const handleClick = (item) => {
-    console.log(item);
+    setCarrito(item);
   };
   return (
     <>

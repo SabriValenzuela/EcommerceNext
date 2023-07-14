@@ -1,48 +1,52 @@
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
 
-  .formulario {
-    margin-bottom: 20px;
-    text-align: center;
-  }
+.formulario {
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-  .formulario h2 {
-    margin-top: 0;
-  }
-  /* Fechas */
-  .input[type="date"].campo-fecha {
-    width: 12%;
-    padding: 5px;
-    margin-bottom: 10px;
-    resize: none;
-    float: right;
+.formulario h2 {
+  margin-top: 0;
+}
+/* Fechas */
+.formulario input[type="date"].campo_fecha {
+  width: 12%;
+  padding: 5px;
+  margin-bottom: 10px;
+  resize: none;
+  float: right;
+}
+/* Formulario titulo */
 
-  }
-  /* Formulario titulo */
-  .input{
-    width: 99%;
-    padding: 5px;
-    margin-bottom: 10px;
-    resize: none;
-  }
-  /* Formulario texto */
-  .formulario textarea{
-    width: 99%; /* Cambia el valor según tus necesidades */
-    max-width: 100%; /* Evita que el textarea se desborde */
-    height: 200px; /* Cambia el valor según tus necesidades */
-    padding: 5px;
-    margin-bottom: 10px;
-    resize: none;
-  }
+.input {
+  width: 99%;
+  padding: 5px;
+  margin-bottom: 10px;
+  resize: none;
+}
 
-  /* Boton de publicación */
-  .formulario_button {
-    background-color: #ffa600;
-    color: #ffffff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  .formulario_button:hover{
-  background-color:#fbd999;
-  }
+/* Formulario texto */
+.textarea {
+  width: 99%; /* Cambia el valor según tus necesidades */
+  max-width: 100%; /* Evita que el textarea se desborde */
+  height: 200px; /* Cambia el valor según tus necesidades */
+  padding: 5px;
+  margin-bottom: 10px;
+  resize: none;
+}
 
- 
+/* Boton de publicación */
+.formulario_button {
+  background-color: #ffa600;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+.formulario_button:hover {
+  background-color: #fbd999;
+}

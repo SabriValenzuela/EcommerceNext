@@ -2,13 +2,14 @@ import React from "react";
 //import Image from next/image para importar en el futuro img de prodructos
 //import Link from 'next/image'
 import style from "./carrito.module.css";
+import Link from "next/link";
 
 export default function comprasCarrito() {
   return (
-    <main>
+    <main className={style.body}>
       <section className={style.cart_page}>
         <h2 className={style.custom_title}>Carrito de Compras</h2>
-        <table>
+        <table className={style.table}>
           <thead>
             <tr className={style.tr}>
               <th>Producto</th>
@@ -45,9 +46,9 @@ export default function comprasCarrito() {
             </tr>
           </tfoot>
         </table>
-        <a href="#" className={style.checkout_btn}>
+        <Link href="#" className={style.checkout_btn}>
           Pagar
-        </a>
+        </Link>
       </section>
     </main>
   );

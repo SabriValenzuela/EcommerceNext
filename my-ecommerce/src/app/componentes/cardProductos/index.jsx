@@ -14,7 +14,7 @@ export default function Card({ item, handleClick }) {
     <>
       <div className={style.container_prod}>
         <div className={style.carta_prod}>
-          <h5 className={style.titulo_item}>{item.nombre}</h5>
+          <h5 className={style.titulo_item}>{item.producto_nombre}</h5>
           <Image
             src="/images/PropoleoSpray_1.jpg"
             className={style.img_item}
@@ -24,11 +24,11 @@ export default function Card({ item, handleClick }) {
           />
 
           <div className={style.capa}>
-            <h3>{item.nombre}</h3>
-            <p>{item.descripcion}</p>
+            <h3>{item.producto_nombre}</h3>
+            <p>{item.producto_descripcion}</p>
             <button onClick={(_) => handleClick(item)}>Agregar al carro</button>
           </div>
-          <h5 className={style.precio_item}>${item.precio}</h5>
+          <h5 className={style.precio_item}>${item.producto_precio}</h5>
         </div>
       </div>
     </>

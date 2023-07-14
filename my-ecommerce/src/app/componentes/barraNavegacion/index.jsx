@@ -10,7 +10,7 @@ export default function BarraNavegacion() {
         <div className={style.nav_links} id={style.navLinks}>
           <Link href="/">Inicio</Link>
           <Link href="/sobreNosotros">Sobre Nosotros</Link>
-          <Link href="/productos mala/productos.html">Productos</Link>
+          <Link href="/productos">Productos</Link>
           <Link href="/blogPublicaciones">Blog</Link>
           <Link href="/mayoristas">Mayoristas</Link>
           <Link href="/contacto/contacto.html">Contacto</Link>

@@ -1,3 +1,12 @@
+/* .body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ */
 .custom_title {
   font-size: 24px; /* Tamaño del título */
   font-weight: bold; /* Negrita */
@@ -14,9 +23,10 @@
 .table {
   width: 100%;
   border-collapse: collapse;
+  margin: 30px;
 }
 
-.th {
+.tr {
   padding: 10px;
   text-align: left;
 }
@@ -36,6 +46,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 120px;
+  height: 40px;
 }
 /*   .checkout_btn:hover {
     background-color: #cf9441bf;

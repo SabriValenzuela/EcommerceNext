@@ -10,13 +10,16 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .container_prod .carta_prod {
   position: relative;
   width: 230px;
-  height: 350px;
+  height: 380px;
   border-radius: 10px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   overflow: hidden;
