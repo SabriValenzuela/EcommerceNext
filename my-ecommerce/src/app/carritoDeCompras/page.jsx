@@ -1,10 +1,13 @@
+"use client";
 import React from "react";
 //import Image from next/image para importar en el futuro img de prodructos
 //import Link from 'next/image'
 import style from "./carrito.module.css";
 import Link from "next/link";
+import { useAppContext } from "../componentes/estadoContenedor";
 
 export default function comprasCarrito() {
+  const cart = useAppContext();
   return (
     <main className={style.body}>
       <section className={style.cart_page}>
@@ -20,24 +23,16 @@ export default function comprasCarrito() {
             </tr>
           </thead>
           <tbody>
-            <tr className={style.tr}>
-              <td>Propoleo en Spray</td>
-              <td>$4.000</td>
-              <td>2</td>
-              <td>$8.000</td>
-              <td>
-                <button className={style.remove_btn}>Eliminar</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Llavero</td>
-              <td>$1.500</td>
-              <td>1</td>
-              <td>$1.500</td>
-              <td>
-                <button className={style.remove_btn}>Eliminar</button>
-              </td>
-            </tr>
+            {cart.items.map((item1, index) => (
+              <tr className={style.tr}>
+                <td>{item1.producto_nombre}</td>
+                <td>{item1.producto_precio}</td>
+                <td>{item1.qty}</td>
+                <td>
+                  <button className={style.remove_btn}>Eliminar</button>
+                </td>
+              </tr>
+            ))}
           </tbody>
           <tfoot>
             <tr>

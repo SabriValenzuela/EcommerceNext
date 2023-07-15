@@ -10,7 +10,7 @@ export default async function ProductosPagina({ handleClick }) {
     <>
       {productos.map((prod, index) => (
         <div key={index}>
-          <Card item={prod} handleClick={handleClick} />
+          <Card item={prod} />
         </div>
       ))}
     </>

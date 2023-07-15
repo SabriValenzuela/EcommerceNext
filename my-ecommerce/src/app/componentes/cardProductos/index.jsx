@@ -3,13 +3,14 @@ import React from "react";
 import style from "./card.module.css";
 import Image from "next/image";
 import productos from "@/app/productos/productosPagina";
+import { useAppContext } from "../estadoContenedor";
 
-export default function Card({ item, handleClick }) {
-  /* console.log(props);
-  const handleClick = () => {
-    console.log(props);
-  }; */
-
+export default function Card({ item }) {
+  const cart = useAppContext();
+  function handleClick() {
+    console.log(item);
+    cart.addItemToCart(item);
+  }
   return (
     <>
       <div className={style.container_prod}>
@@ -26,7 +27,7 @@ export default function Card({ item, handleClick }) {
           <div className={style.capa}>
             <h3>{item.producto_nombre}</h3>
             <p>{item.producto_descripcion}</p>
-            <button onClick={(_) => handleClick(item)}>Agregar al carro</button>
+            <button onClick={handleClick}>Agregar al carro</button>
           </div>
           <h5 className={style.precio_item}>${item.producto_precio}</h5>
         </div>
