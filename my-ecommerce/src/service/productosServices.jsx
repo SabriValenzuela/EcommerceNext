@@ -10,6 +10,16 @@ export async function getBlog() {
   return items;
 }
 
+export async function postBlog(blogData) {
+  const request = await fetch("http://localhost:8080/blog/nuevo", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(blogData),
+  });
+}
+
 export async function getProductos() {
   const request = await fetch("http://localhost:8080/producto/lista");
   const items = await request.json();
@@ -22,8 +32,8 @@ export async function getProductos() {
   return items;
 }
 
-/* export async function getItemsById(id) {
-    const request = await fetch(http:/localhost:)
-    const items = await request.json();
-    return items;
-} */
+export async function getItemsById(id) {
+  const request = await fetch(`http://localhost:8080/producto/obtener/${id}`);
+  const items = await request.json();
+  return items;
+}

@@ -1,0 +1,76 @@
+/*productos sss
+*/
+
+.contenidoProductos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.contenidoProductos .columna1Prod {
+  width: 50%;
+  height: 60%;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* .columna1Prod img {
+    width: 150px;
+    height: 160px;
+    object-fit: scale-down;
+    margin-left: 20%; 
+
+} */
+
+/* .columna1Prod ul {
+  overflow: hidden;
+  display: flex;
+  width: 320px;
+  height: 400px;
+  margin-top: 0%;
+} */
+
+.columna1Prod ul li {
+  border: 5px #df760b;
+}
+
+.columna1Prod ul li img {
+  width: 330px;
+  height: 400px;
+  margin-left: 120px;
+  margin-bottom: 6 0px;
+}
+
+.contenidoProductos .columna2Prod {
+  width: 40%;
+  font-size: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.columna2Prod h2 {
+  font-size: 30px;
+  justify-content: left;
+  margin: 0%;
+}
+
+.columna2Prod p {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 0 0 0;
+}
+
+.columna2Prod h4 {
+  color: gray;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.agregarAlCarro {
+  font-size: 1em;
+  font-weight: 100;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  background-color: #df760b;
+}

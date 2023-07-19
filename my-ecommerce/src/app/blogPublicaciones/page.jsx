@@ -1,9 +1,19 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import style from "./blogPublicaciones.module.css";
 import Image from "next/image";
-import { getBlog } from "@/service/productosServices";
+import { getBlog } from "../../service/productosServices";
+import { useSession } from "next-auth/react";
 
 export default async function page() {
+  const { data: session, status } = useSession({
+    required: true,
+  });
+
+  if (status === "loading") {
+    return <></>;
+  }
+
   const blogs = await getBlog();
 
   return (
@@ -12,7 +22,7 @@ export default async function page() {
         <h2>Blog</h2>
         <br />
         <div className={style.publicacion}>
-          {blogs.map((blog, index) => (
+          {blogs.map((blog) => (
             <>
               <div className={style.post_date}>{blog.blog_fecha}</div>
               <h3>{blog.blog_titulo}</h3>

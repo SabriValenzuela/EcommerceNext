@@ -9,7 +9,6 @@ const AppContext = createContext({
 
 export default function EstadoComponente({ children }) {
   const [items, setItems] = useState([]);
-
   function handleAddItemToCart(item) {
     const temp = [...items];
     /*  console.log(temp); */
