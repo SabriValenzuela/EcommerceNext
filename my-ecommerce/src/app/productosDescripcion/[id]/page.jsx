@@ -2,7 +2,7 @@ import React from "react";
 import style from "./productosDescripcion.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { getItemsById } from "@/service/productosServices";
+import { getItemsById } from "../../../service/productosServices";
 
 export default function ProductoDescripcion({ params }) {
   const id = params.id;

@@ -12,10 +12,11 @@ export default function EstadoComponente({ children }) {
   function handleAddItemToCart(item) {
     const temp = [...items];
     /*  console.log(temp); */
-    const found = temp.find((i) => i.id === item.id);
+    console.log(temp);
+    const found = temp.find((i) => i.producto_id === item.producto_id);
+    /*  console.log(found); */
     if (found) {
       found.qty++;
-      /*  console.log(found); */
     } else {
       item.qty = 1;
       temp.push(item);

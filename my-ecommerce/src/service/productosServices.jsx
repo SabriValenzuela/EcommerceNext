@@ -37,3 +37,13 @@ export async function getItemsById(id) {
   const items = await request.json();
   return items;
 }
+
+export async function postCliente(clienteData) {
+  const request = await fetch("http://localhost:8080/Cliente/nuevo", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(clienteData),
+  });
+}
