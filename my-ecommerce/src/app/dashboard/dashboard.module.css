@@ -1,0 +1,46 @@
+.dashboard {
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bienvenida {
+  text-align: center;
+  font-size: 35px;
+  margin: 20px;
+  color: #000000;
+  padding: 30px;
+}
+
+.contenedor {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.item {
+  text-align: center;
+  align-items: center;
+  margin: 5px;
+  border: 1px solid #f0f0f0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 480px) {
+  .contenedor img {
+    height: 100px;
+    width: auto;
+  }
+}

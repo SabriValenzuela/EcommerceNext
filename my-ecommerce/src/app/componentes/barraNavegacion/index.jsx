@@ -13,7 +13,7 @@ export default function BarraNavegacion() {
           <Link href="/productos">Productos</Link>
           <Link href="/blogPublicaciones">Blog</Link>
           <Link href="/mayoristas">Mayoristas</Link>
-          <Link href="/contacto/contacto.html">Contacto</Link>
+          <Link href="/contacto">Contacto</Link>
         </div>
       </nav>
       <section className={style.logo}>

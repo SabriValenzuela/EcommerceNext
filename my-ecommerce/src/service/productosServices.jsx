@@ -1,3 +1,5 @@
+import { throws } from "assert";
+
 export async function getBlog() {
   const request = await fetch("http://localhost:8080/blog/obtener");
   const items = await request.json();
@@ -46,4 +48,9 @@ export async function postCliente(clienteData) {
     },
     body: JSON.stringify(clienteData),
   });
+  if (!request.ok) {
+    throw new Error("error en la petición");
+  }
+  const data = await request.json();
+  return data;
 }

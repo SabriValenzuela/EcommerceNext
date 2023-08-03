@@ -3,17 +3,8 @@ import React, { useState } from "react";
 import style from "./blogPublicaciones.module.css";
 import Image from "next/image";
 import { getBlog } from "../../service/productosServices";
-import { useSession } from "next-auth/react";
 
 export default async function page() {
-  const { data: session, status } = useSession({
-    required: true,
-  });
-
-  if (status === "loading") {
-    return <></>;
-  }
-
   const blogs = await getBlog();
 
   return (
@@ -38,12 +29,12 @@ export default async function page() {
           ))}{" "}
         </div>
       </section>
-      <div className={style.container}>
+      {/*   <div className={style.container}>
         <button className={style.boton_ver_todas}>
           Ver todas las publicaciones
         </button>
         <button className={style.boton_ordenar_fecha}>Ordenar por fecha</button>
-      </div>
+      </div> */}
     </main>
   );
 }

@@ -5,10 +5,13 @@ const AppContext = createContext({
   items: [],
   addItemToCart: (item) => {},
   getNumberOfItems: () => {},
+  removeItemFromCart: (item) => {},
 });
 
 export default function EstadoComponente({ children }) {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("items")) || []
+  );
   function handleAddItemToCart(item) {
     const temp = [...items];
     /*  console.log(temp); */
@@ -22,6 +25,7 @@ export default function EstadoComponente({ children }) {
       temp.push(item);
     }
     setItems([...temp]);
+    localStorage.setItem("items", JSON.stringify(temp));
   }
 
   function getNumberOfItems() {
@@ -31,12 +35,20 @@ export default function EstadoComponente({ children }) {
     return total;
   }
 
+  function handleRemoveItemFromCart(itemId) {
+    const temp = items.filter((item) => item.producto_id !== itemId);
+    setItems(temp);
+    // Por ejemplo, si estás usando localStorage:
+    localStorage.setItem("items", JSON.stringify(temp));
+  }
+
   return (
     <AppContext.Provider
       value={{
         items: items,
         addItemToCart: handleAddItemToCart,
         getNumberOfItems: getNumberOfItems,
+        removeItemFromCart: handleRemoveItemFromCart,
       }}
     >
       {children}

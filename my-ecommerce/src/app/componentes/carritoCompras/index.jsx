@@ -7,7 +7,7 @@ export default function CarritoCompras() {
   return (
     <header>
       <div id="cart" class={style.cart} data-totalitems="0">
-        <Link href="./carritoDeCompras">
+        <Link href="/carritoDeCompras" replace>
           <FaShoppingCart className={style.i} />
         </Link>
       </div>

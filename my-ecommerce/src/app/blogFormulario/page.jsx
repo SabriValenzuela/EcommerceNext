@@ -2,8 +2,17 @@
 import React, { useEffect, useState } from "react";
 import style from "./blogFormulario.module.css";
 import { postBlog } from "../../service/productosServices";
+import { useSession } from "next-auth/react";
 
 export default async function page() {
+  /*   const { data: session, status } = useSession({
+    required: true,
+  });
+
+  if (status === "loading") {
+    return <></>;
+  } */
+
   const [formData, setFormData] = useState({
     blog_titulo: "",
     blog_fecha: "",

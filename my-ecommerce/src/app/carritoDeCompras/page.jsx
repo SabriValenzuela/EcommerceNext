@@ -22,6 +22,10 @@ export default function comprasCarrito() {
     setForm(true);
   };
 
+  function handleRemoveClick(e) {
+    cart.removeItemFromCart(Number(e.target.value));
+  }
+
   return (
     <>
       <main className={style.body}>
@@ -46,7 +50,13 @@ export default function comprasCarrito() {
                     <td>{item1.qty}</td>
                     <td>Subtotal</td>
                     <td>
-                      <button className={style.remove_btn}>Eliminar</button>
+                      <button
+                        className={style.remove_btn}
+                        onClick={handleRemoveClick}
+                        value={item1.producto_id}
+                      >
+                        Eliminar
+                      </button>
                     </td>
                   </tr>
                 ))}

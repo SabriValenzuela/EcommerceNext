@@ -1,12 +1,20 @@
+"use client";
 import React from "react";
 import style from "./productosDescripcion.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { getItemsById } from "../../../service/productosServices";
+import { useAppContext } from "../../componentes/estadoContenedor/index";
 
-export default function ProductoDescripcion({ params }) {
+export default async function ProductoDescripcion({ params }) {
+  const cart = useAppContext();
   const id = params.id;
-  const data = getItemsById({ id });
+  const data = await getItemsById(id);
+
+  function handleClick() {
+    cart.addItemToCart(data);
+  }
+
   return (
     <>
       <div className={style.contenidoProductos}>
@@ -24,20 +32,15 @@ export default function ProductoDescripcion({ params }) {
           </ul>
         </div>
         <div className={style.columna2Prod}>
-          <h2 className={style.info_title}>
-            {/* {item.producto_nombre} */} hola
-          </h2>
-          <h4>{/* {item.producto_categoria} */} categoria</h4>
-          <p className={style.propoleo}>
-            {/* {item.producto_descripcion} */} descripcion
-          </p>
-          <h2 className={style.info_precio}>
-            {/* {item.producto_precio} */} precio
-          </h2>
-          <br />
-          <br />
+          <h2 className={style.info_title}>{data.producto_nombre}</h2>
+          <h4> {data.producto_categoria} </h4>
+          <p className={style.propoleo}>{data.producto_descripcion}</p>
+          <h2 className={style.info_precio}>{data.producto_precio}</h2>
+
           <Link href="/carritoDeCompras">
-            <button className={style.agregarAlCarro}>Agregar al carrito</button>
+            <button className={style.agregarAlCarro} onClick={handleClick}>
+              Agregar al carrito
+            </button>
           </Link>
         </div>
       </div>
