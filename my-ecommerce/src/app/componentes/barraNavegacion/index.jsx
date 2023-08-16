@@ -1,49 +1,86 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import style from "./barraNavegacion.module.css";
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import style from './barraNavegacion.module.css';
 
 export default function BarraNavegacion() {
-  return (
-    <header className={style.header}>
-      <nav className={style.nav}>
-        <div className={style.nav_links} id={style.navLinks}>
-          <Link href="/">Inicio</Link>
-          <Link href="/sobreNosotros">Sobre Nosotros</Link>
-          <Link href="/productos">Productos</Link>
-          <Link href="/blogPublicaciones">Blog</Link>
-          <Link href="/mayoristas">Mayoristas</Link>
-          <Link href="/contacto">Contacto</Link>
-        </div>
-      </nav>
-      <section className={style.logo}>
-        <Image
-          src="/images/logoNegro.png"
-          className={style.logo}
-          alt="logo"
-          width={180}
-          height={150}
-        />
-      </section>
+	const [activo, setActivo] = useState(false);
 
-      <div
-        className={style.wave}
-        style={{ height: "150px", overflow: "hidden" }}
-      >
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          style={{ height: "100%", width: "100%" }}
-        >
-          <path
-            d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-            style={{ stroke: "none", fill: "#fff" }}
-          />
-        </svg>
-      </div>
-    </header>
+	const handleButtonClick = () => {
+		setActivo(!activo);
+	};
 
-    /*  <div>
+	return (
+		<header className={style.header}>
+			<section className={style.contenedor_superior}>
+				<div className={style.logo}>
+					<Link href={'/'}>
+						<Image
+							src="/images/logoNegro.png"
+							className={style.logo}
+							alt="logo"
+							width={180}
+							height={150}
+						/>
+					</Link>
+					<button onClick={handleButtonClick} className={style.boton}>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="30"
+							height="30"
+							viewBox="0 0 24 24"
+						>
+							<path
+								fill="#86afe6"
+								d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"
+							/>
+						</svg>
+					</button>
+				</div>
+
+				<nav className={`${style.navbar} ${activo ? `${style.activo}` : ''}`}>
+					<ul className={style.nav_links}>
+						<li>
+							<Link href="/">Inicio</Link>
+						</li>
+						<li>
+							<Link href="/sobreNosotros">Sobre Nosotros</Link>
+						</li>
+						<li>
+							<Link href="/productos">Productos</Link>
+						</li>
+						<li>
+							<Link href="/blogPublicaciones">Blog</Link>
+						</li>
+						<li>
+							<Link href="/mayoristas">Mayoristas</Link>
+						</li>
+						<li>
+							<Link href="/contacto">Contacto</Link>
+						</li>
+					</ul>
+				</nav>
+			</section>
+
+			<div
+				className={style.wave}
+				style={{ height: '150px', overflow: 'hidden' }}
+			>
+				<svg
+					viewBox="0 0 500 150"
+					preserveAspectRatio="none"
+					style={{ height: '100%', width: '100%' }}
+				>
+					<path
+						d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+						style={{ stroke: 'none', fill: '#fff' }}
+					/>
+				</svg>
+			</div>
+		</header>
+
+		/*  <div>
     <header className={style.header}>
      
        
@@ -73,5 +110,5 @@ export default function BarraNavegacion() {
       </nav>
     </section>
   </div> */
-  );
+	);
 }

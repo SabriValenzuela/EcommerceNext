@@ -24,6 +24,19 @@
   -webkit-transform: rotate(360deg);
 }
 
+@media screen and (max-width: 768px) {
+  .cart {
+      top: 18%;
+      right: 20px; /* Ajusta este valor según el padding de tu navbar en móviles. */
+      transform: translateY(-50%);
+      margin: 5px 0;
+  }
+
+  .cart .i {
+    font-size: 25px; /* Ajusta según tus preferencias. */
+}
+}
+
 /*   &:before {
     content: attr(data-totalitems);
     font-size: 12px;

@@ -20,46 +20,56 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+
 }
 
-.nav {
+.contenedor_superior{
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
   text-align: right;
   padding: 30px 50px 0 0;
 }
 
 .logo img {
-  justify-content: left;
-  /* width: 180px;
-  height: 150px; */
-  margin-top: -10px;
-  margin-left: 50px;
+  display: flex;
 }
 
-.nav a {
+.logo .boton{
+  display: none;
+  margin: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.navbar a {
   color: #ffffff;
   font-weight: 900;
   text-decoration: none;
   margin-right: 10px;
   font-style: inherit;
   width: 20%;
-  padding: 0.65rem 0;
   text-align: right;
   text-transform: uppercase;
   flex-wrap: wrap;
 }
 
-.nav :hover {
+.nav_links li a:hover {
   text-decoration: underline;
-
   color: #fdb93c;
 }
 
-/*nav > a:hover{
+/* nav > a:hover{
     text-decoration: underline;
-}*/
+} */
 
-.nav_links ul {
+.nav_links {
   display: flex;
+  list-style: none;
+  justify-content: end;
 }
 
 .wave {
@@ -68,6 +78,78 @@
   width: 100%;
   height: 150px;
   overflow: hidden;
+  
+}
+
+@media screen and (max-width:480px){
+  .header{
+    height: auto;
+    padding: 30px;
+  }
+
+  .contenedor_superior{
+    display: block;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo .boton{
+    display: block;
+    cursor: pointer;
+  }
+
+  .svg{
+    padding: 0 5px;
+  }
+
+  .contenedor_superior .navbar{
+    flex-direction: column;
+    width: 100%;
+    opacity: 0; /* Escondemos inicialmente con opacity */
+    height: 0;  /* Usamos height para asegurarnos que no ocupe espacio */
+    pointer-events: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease; /* Especificamos las propiedades que deseamos animar */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001; /* este valor puede necesitar ajuste */
+    margin: 0;
+    padding: 0;
+    transform: translateX(100%);
+  }
+
+  .contenedor_superior .navbar.activo{
+    opacity: 1; /* Mostrar cuando esté activo */
+    height: auto;
+    max-height: 30vh;  /* Esto es para asegurarnos de que no cubra toda la pantalla si hay muchos elementos. Puedes ajustarlo según necesites. */
+    pointer-events: auto;
+    transform: translateX(0);
+    
+  }
+
+  .wave{
+    display: none;
+  }
+
+  .contenedor_superior ul{
+    display: block;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .contenedor_superior li{
+    margin: 1rem 0;
+  }
+
+  .logo img{
+    margin: 0;
+  }
 }
 
 /*
