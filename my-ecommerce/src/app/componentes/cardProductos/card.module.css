@@ -16,6 +16,10 @@
   margin-right: 20px;
 }
 
+.container_prod a{
+  text-decoration: none;
+}
+
 .container_prod .carta_prod {
   position: relative;
   width: 230px;

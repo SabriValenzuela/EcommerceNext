@@ -1,12 +1,14 @@
 .titulo{
-color: #ffa600;
-font-size: 28px;
-text-align: center;
-padding: 20px;
+    color: #ffa600;
+    font-size: 28px;
+    text-align: center;
+    padding: 20px;
 }
 
 .flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   }
+    width: 90%;
+    margin: auto ;
+}
